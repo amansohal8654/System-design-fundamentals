@@ -279,3 +279,25 @@ of the requested domain name in the response.
   often used as a <b>reverse proxy</b> and <b>load balancer</b>.
 </p>
 <a href="https://www.nginx.com/" target="_blank">Learn more: <span>https://www.nginx.com/</span></a>
+
+# Hashing
+
+<h4>Consistent Hashing</h4>
+<p>
+  A type of hashing that minimizes the number of keys that need to be remapped
+  when a hash table gets resized. It's often used by load balancers to
+  distribute traffic to servers; it minimizes the number of requests that get
+  forwarded to different servers when new servers are added or when existing
+  servers are brought down.
+</p>
+<h4>Rendezvous Hashing</h4>
+<p>
+  A type of hashing also coined <b>highest random weight</b> hashing. Allows for
+  minimal re-distribution of mappings when a server goes down.
+</p>
+<h4>SHA</h4>
+<p>
+  Short for "Secure Hash Algorithms", the SHA is a collection of cryptographic
+  hash functions used in the industry. These days, SHA-3 is a popular choice to
+  use in a system.
+</p>
