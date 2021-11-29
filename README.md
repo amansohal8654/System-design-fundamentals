@@ -1,7 +1,7 @@
 # System Design Fundamentals
 Building scalable, production-ready applications is both art and science. Science, in that it requires knowledge of many topics in computer engineering; art, in that it demands an eye for making smart design choices and piecing together the right technologies.
 
-<li><h4>Client</h4>
+<h4>Client</h4>
 <p>
   A machine or process that requests data or service from a server.
 </p>
@@ -10,7 +10,7 @@ Building scalable, production-ready applications is both art and science. Scienc
   server at the same time. For instance, a single machine could act as a server
   for end users and as a client for a database.
 </p>
-</div></div></li><li><h4 class="_1nn4hNzVIMwqN6girxtftq">Server</h4><div class="_2Ix89ObBL--yfIHxbqzAJ1 default"><div class="html">
+<h4>Server</h4>
 <p>
   A machine or process that provides data or service for a client, usually by
   listening for incoming network calls.
@@ -20,13 +20,13 @@ Building scalable, production-ready applications is both art and science. Scienc
   server at the same time. For instance, a single machine could act as a server
   for end users and as a client for a database.
 </p>
-</div></div></li><li><h4 class="_1nn4hNzVIMwqN6girxtftq">Client—Server Model</h4><div class="_2Ix89ObBL--yfIHxbqzAJ1 default"><div class="html">
+<h4>Client—Server Model</h4>
 <p>
   The paradigm by which modern systems are designed, which consists of clients
   requesting data or service from servers and servers providing data or service
   to clients.
 </p>
-</div></div></li><li><h4 class="_1nn4hNzVIMwqN6girxtftq">IP Address</h4><div class="_2Ix89ObBL--yfIHxbqzAJ1 default"><div class="html">
+<h4>IP Address</h4>
 <p>
   An address given to each machine connected to the public internet. IPv4
   addresses consist of four numbers separated by dots: <b>a.b.c.d</b> where all
@@ -43,7 +43,7 @@ Building scalable, production-ready applications is both art and science. Scienc
     <b>192.168</b> prefix.
   </li>
 </ul>
-</div></div></li><li><h4 class="_1nn4hNzVIMwqN6girxtftq">Port</h4><div class="_2Ix89ObBL--yfIHxbqzAJ1 default"><div class="html">
+<h4>Port</h4>
 <p>
   In order for multiple programs to listen for new network connections on the
   same machine without colliding, they pick a <b>port</b> to listen on. A port
@@ -62,11 +62,10 @@ Building scalable, production-ready applications is both art and science. Scienc
   <li>80: HTTP</li>
   <li>443: HTTPS</li>
 </ul>
-</div></div></li><li><h4 class="_1nn4hNzVIMwqN6girxtftq">DNS</h4><div class="_2Ix89ObBL--yfIHxbqzAJ1 default"><div class="html">
+<h4>DNS</h4>
 <p>
 Short for Domain Name System, it describes the entities and protocols involved in the
 translation from domain names to IP Addresses. Typically, machines make a DNS query to
 a well known entity which is responsible for returning the IP address (or multiple ones)
 of the requested domain name in the response.
 </p>
-</div></div></li></ul></div>
