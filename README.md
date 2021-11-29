@@ -141,3 +141,46 @@ of the requested domain name in the response.
   instance the throughput of a server can often be measured in requests per
   second (RPS or QPS).
 </p>
+
+# Availability
+<h4>Availability</h4>
+<p>
+  The odds of a particular server or service being up and running at any point
+  in time, usually measured in percentages. A server that has 99% availability
+  will be operational 99% of the time (this would be described as having two
+  <b>nines</b> of availability).
+</p>
+<h4>High Availability</h4>
+<p>
+  Used to describe systems that have particularly high levels of availability,
+  typically 5 nines or more; sometimes abbreviated "HA".
+</p>
+<h4>Nines</h4>
+<p>
+  Typically refers to percentages of uptime. For example, 5 nines of
+  availability means an uptime of 99.999% of the time. Below are the downtimes
+  expected per year depending on those 9s:
+</p>
+<pre>- 99% (two 9s): 87.7 hours
+- 99.9% (three 9s): 8.8 hours
+- 99.99%: 52.6 minutes
+- 99.999%: 5.3 minutes
+</pre>
+<h4>Redundancy</h4>
+<p>
+  The process of replicating parts of a system in an effort to make it more
+  reliable.
+</p>
+<h4>SLA</h4>
+<p>
+  Short for "service-level agreement", an SLA is a collection of guarantees
+  given to a customer by a service provider. SLAs typically make guarantees on a
+  system's availability, amongst other things. SLAs are made up of one or
+  multiple SLOs.
+</p>
+<h4>SLO</h4>
+<p>
+  Short for "service-level objective", an SLO is a guarantee given to a customer
+  by a service provider. SLOs typically make guarantees on a system's
+  availability, amongst other things. SLOs constitute an SLA.
+</p>
