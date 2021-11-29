@@ -184,3 +184,50 @@ of the requested domain name in the response.
   by a service provider. SLOs typically make guarantees on a system's
   availability, amongst other things. SLOs constitute an SLA.
 </p>
+
+# Cache
+
+<h4>Cache</h4>
+<p>
+  A piece of hardware or software that stores data, typically meant to retrieve
+  that data faster than otherwise.
+</p>
+<p>
+  Caches are often used to store responses to network requests as well as
+  results of computationally-long operations.
+</p>
+<p>
+  Note that data in a cache can become <b>stale</b> if the main source of truth
+  for that data (i.e., the main database behind the cache) gets updated and the
+  cache doesn't.
+</p>
+<h4>Cache Hit</h4>
+<p>When requested data is found in a cache.</p>
+<h4>Cache Miss</h4>
+<p>
+  When requested data could have been found in a cache but isn't. This is
+  typically used to refer to a negative consequence of a system failure or of a
+  poor design choice. For example:
+</p>
+<p>
+  <i>
+    If a server goes down, our load balancer will have to forward requests to a
+    new server, which will result in cache misses.
+  </i>
+</p>
+<h4>Cache Eviction Policy</h4>
+<p>
+  The policy by which values get evicted or removed from a cache. Popular cache
+  eviction policies include <b>LRU</b> (least-recently used), <b>FIFO</b> (first
+  in first out), and <b>LFU</b> (least-frequently used).
+</p>
+<h4>Content Delivery Network</h4>
+<p>
+  A <b>CDN</b> is a third-party service that acts like a cache for your servers.
+  Sometimes, web applications can be slow for users in a particular region if
+  your servers are located only in another region. A CDN has servers all around
+  the world, meaning that the latency to a CDN's servers will almost always be
+  far better than the latency to your servers. A CDN's servers are often referred
+  to as <b>PoPs</b> (Points of Presence). Two of the most popular CDNs are
+  <b>Cloudflare</b> and <b>Google Cloud CDN</b>.
+</p>
