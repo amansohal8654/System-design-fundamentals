@@ -250,3 +250,32 @@ of the requested domain name in the response.
   often used as a <b>reverse proxy</b> and <b>load balancer</b>.
 </p>
 <a href="https://www.nginx.com/" target="_blank">Learn more: <span>https://www.nginx.com/</span></a>
+
+# Load Balancer
+<h4>Load Balancer</h4>
+<p>
+  A type of <b>reverse proxy</b> that distributes traffic across servers. Load
+  balancers can be found in many parts of a system, from the DNS layer all the
+  way to the database layer.
+</p>
+<h4>Server-Selection Strategy</h4>
+<p>
+  How a <b>load balancer</b> chooses servers when distributing traffic amongst
+  multiple servers. Commonly used strategies include round-robin, random
+  selection, performance-based selection (choosing the server with the best
+  performance metrics, like the fastest response time or the least amount of
+  traffic), and IP-based routing.
+</p>
+<h4>Hot Spot</h4>
+<p>
+  When distributing a workload across a set of servers, that workload might be
+  spread unevenly. This can happen if your <b>sharding key</b> or your <b>hashing function</b>
+  are suboptimal, or if your workload is naturally skewed: some servers will
+  receive a lot more traffic than others, thus creating a "hot spot".
+</p>
+<h4>Nginx<div data-tip="This is a technology or product that you can use in your systems." data-for="tooltip-generic" currentitem="false"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="_36tI9rYzSsMV4aoMxw-A5n"><path d="M216.056 509.316l197.488-340.044c4.471-7.699-1.87-17.173-10.692-15.973l-131.364 17.855L302.875 6.372c1.058-5.555-6.104-8.738-9.518-4.231L99.183 258.451c-5.656 7.465.333 18.08 9.647 17.1l144.828-15.245-47.479 245.308c-1.145 5.917 6.85 8.914 9.877 3.702z" fill="#c00030"></path><path d="M159.905 240.287c-3.627.29-6.036-3.675-4.108-6.76L300.976 1.241c-2.16-1.709-5.56-1.819-7.619.899L99.183 258.45c-5.656 7.466.333 18.08 9.647 17.1l144.828-15.245-47.479 245.308c-.64 3.309 1.592 5.637 4.201 6.194l81.359-257.447c3.814-12.067-5.808-24.156-18.423-23.146l-113.411 9.073z" fill="#ff0040"></path></svg></div></h4>
+<p>
+  Pronounced "engine X"—not "N jinx", Nginx is a very popular webserver that's
+  often used as a <b>reverse proxy</b> and <b>load balancer</b>.
+</p>
+<a href="https://www.nginx.com/" target="_blank">Learn more: <span>https://www.nginx.com/</span></a>
