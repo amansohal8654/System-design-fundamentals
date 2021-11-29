@@ -120,3 +120,24 @@ of the requested domain name in the response.
   Usually refers to disk, but in general it is any form of storage that persists
   if the process in charge of managing it dies.
 </p>
+
+# Latency Throughput
+<h4>Latency</h4>
+<p>
+  The time it takes for a certain operation to complete in a system. Most often
+  this measure is a time duration, like milliseconds or seconds. You should know
+  these orders of magnitude:
+</p>
+<ul>
+  <li><b>Reading 1 MB from RAM</b>: 250 μs (0.25 ms)</li>
+  <li><b>Reading 1 MB from SSD</b>: 1,000 μs (1 ms)</li>
+  <li><b>Transfer 1 MB over Network</b>: 10,000 μs (10 ms)</li>
+  <li><b>Reading 1MB from HDD</b>: 20,000 μs (20 ms)</li>
+  <li><b>Inter-Continental Round Trip</b>: 150,000 μs (150 ms)</li>
+</ul>
+<h4>Throughput</h4>
+<p>
+  The number of operations that a system can handle properly per time unit. For
+  instance the throughput of a server can often be measured in requests per
+  second (RPS or QPS).
+</p>
