@@ -40,7 +40,7 @@ function pickServerRendezvous(username, servers){
     let maxScore = null;
     for(const server of servers){
         const score = utils.computeScore(username, server);
-        if(maxScore = null || score > maxScore){
+        if(maxScore === null || score > maxScore){
             maxScore = score;
             maxServer = server;
         }
@@ -53,7 +53,7 @@ for(const username of usernames){
     const server1 = picSimpleServer(username, serverSet1);
     const server2 = picSimpleServer(username, serverSet2);
     const serverAreEqual = server1 === server2;
-    console.log(`${username}: ${server2} | equal: ${serverAreEqual}`)
+    console.log(`${server1}: ${server2} | equal: ${serverAreEqual}`)
 }
 
 console.log('\nRendezvous hashing Strategy:');
@@ -61,5 +61,5 @@ for(const username of usernames){
     const server1 = pickServerRendezvous(username, serverSet1);
     const server2 = pickServerRendezvous(username, serverSet2);
     const serverAreEqual = server1 === server2;
-    console.log(`${username}: ${server2} | equal: ${serverAreEqual}`)
+    console.log(`${server1}: ${server2} | equal: ${serverAreEqual}`)
 }
