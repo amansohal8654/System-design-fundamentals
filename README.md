@@ -301,3 +301,82 @@ of the requested domain name in the response.
   hash functions used in the industry. These days, SHA-3 is a popular choice to
   use in a system.
 </p>
+
+# Relational Database
+
+<h4>Relational Database</h4>
+<p>
+  A type of structured database in which data is stored following a tabular
+  format; often supports powerful querying using SQL.
+</p>
+<h4>Non-Relational Database</h4>
+<p>
+  In contrast with relational database (SQL databases), a type of database that
+  is free of imposed, tabular-like structure. Non-relational databases are often
+  referred to as NoSQL databases.
+</p>
+<h4>SQL</h4>
+<p>
+  Structured Query Language. Relational databases can be used using a derivative
+  of SQL such as PostgreSQL in the case of Postgres.
+</p>
+<h4>SQL Database</h4>
+<p>
+  Any database that supports SQL. This term is often used synonymously with
+  "Relational Database", though in practice, not <i>every</i> relational
+  database supports SQL.
+</p>
+<h4>NoSQL Database</h4>
+<p>Any database that is not SQL-compatible is called NoSQL.</p>
+<h4>ACID Transaction</h4>
+<p>
+  A type of database transaction that has four important properties:
+</p>
+<ul>
+  <li>
+    <b>Atomicity</b>: The operations that constitute the transaction will either
+    all succeed or all fail. There is no in-between state.
+  </li>
+  <li>
+    <b>Consistency</b>: The transaction cannot bring the database to an invalid
+    state. After the transaction is committed or rolled back, the rules for each
+    record will still apply, and all future transactions will see the effect of
+    the transaction. Also named <b>Strong Consistency</b>.
+  </li>
+  <li>
+    <b>Isolation</b>: The execution of multiple transactions concurrently will
+    have the same effect as if they had been executed sequentially.
+  </li>
+  <li>
+    <b>Durability</b>: Any committed transaction is written to non-volatile
+    storage. It will not be undone by a crash, power loss, or network partition.
+  </li>
+</ul>
+<h4>Database Index</h4>
+<p>
+  A special auxiliary data structure that allows your database to perform
+  certain queries much faster. Indexes can typically only exist to reference
+  structured data, like data stored in relational databases. In practice, you
+  create an index on one or multiple columns in your database to greatly speed
+  up <b>read</b> queries that you run very often, with the downside of slightly
+  longer <b>writes</b> to your database, since writes have to also take place in
+  the relevant index.
+</p>
+<h4>Strong Consistency</h4>
+<p>
+Strong Consistency usually refers to the consistency of ACID transactions, as opposed to <b>Eventual Consistency</b>.
+</p>
+<h4>Eventual Consistency</h4>
+<p>
+  A consistency model which is unlike <b>Strong Consistency</b>. In this model,
+  reads might return a view of the system that is stale. An eventually
+  consistent datastore will give guarantees that the state of the database will
+  eventually reflect writes within a time period (could be 10 seconds, or
+  minutes).
+</p>
+<h4>Postgres<div data-tip="This is a technology or product that you can use in your systems." data-for="tooltip-generic" currentitem="false"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="_36tI9rYzSsMV4aoMxw-A5n"><path d="M216.056 509.316l197.488-340.044c4.471-7.699-1.87-17.173-10.692-15.973l-131.364 17.855L302.875 6.372c1.058-5.555-6.104-8.738-9.518-4.231L99.183 258.451c-5.656 7.465.333 18.08 9.647 17.1l144.828-15.245-47.479 245.308c-1.145 5.917 6.85 8.914 9.877 3.702z" fill="#c00030"></path><path d="M159.905 240.287c-3.627.29-6.036-3.675-4.108-6.76L300.976 1.241c-2.16-1.709-5.56-1.819-7.619.899L99.183 258.45c-5.656 7.466.333 18.08 9.647 17.1l144.828-15.245-47.479 245.308c-.64 3.309 1.592 5.637 4.201 6.194l81.359-257.447c3.814-12.067-5.808-24.156-18.423-23.146l-113.411 9.073z" fill="#ff0040"></path></svg></div></h4>
+<p>
+  A relational database that uses a dialect of SQL called PostgreSQL. Provides
+  ACID transactions.
+</p>
+<a href="https://www.postgresql.org/" target="_blank" class="_2HDna_Xo6tAd-QZodCVaIP">Learn more: <span class="Link Link--se _2jFzxkZcdWmXPz821xH3eM">https://www.postgresql.org/</span></a>
