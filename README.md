@@ -635,3 +635,14 @@ Strong Consistency usually refers to the consistency of ACID transactions, as op
   information from a server by keeping an open connection between the two
   machines or processes.
 </p>
+
+# Configuration
+
+<h4>Configuration</h4>
+<p>
+  A set of parameters or constants that are critical to a system. Configuration
+  is typically written in <b>JSON</b> or <b>YAML</b> and can be either <b>static</b>, meaning
+  that it's hard-coded in and shipped with your system's application code (like
+  frontend code, for instance), or <b>dynamic</b>, meaning that it lives outside
+  of your system's application code.
+</p>
