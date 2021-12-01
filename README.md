@@ -703,3 +703,47 @@ Strong Consistency usually refers to the consistency of ACID transactions, as op
   on monitoring charts, past which alerts are sent to a communication channel
   like Slack.
 </p>
+
+# Publish/Subscribe Pattern
+
+<h4>Publish/Subscribe Pattern</h4>
+<p>
+  Often shortened as <b>Pub/Sub</b>, the Publish/Subscribe pattern is a popular
+  messaging model that consists of <b>publishers</b> and <b>subscribers</b>.
+  Publishers publish messages to special <b>topics</b> (sometimes called
+  <b>channels</b>) without caring about or even knowing who will read those
+  messages, and subscribers subscribe to topics and read messages coming through
+  those topics.
+</p>
+<p>
+  Pub/Sub systems often come with very powerful guarantees like
+  <b>at-least-once delivery</b>, <b>persistent storage</b>, 
+  <b>ordering</b> of messages, and <b>replayability</b> of messages.
+</p>
+<h4>Idempotent Operation</h4>
+<p>
+  An operation that has the same ultimate outcome regardless of how many times
+  it's performed. If an operation can be performed multiple times without
+  changing its overall effect, it's idempotent. Operations performed through a
+  <b>Pub/Sub</b> messaging system typically have to be idempotent, since Pub/Sub
+  systems tend to allow the same messages to be consumed multiple times.
+</p>
+<p>
+  For example, increasing an integer value in a database is <i>not</i> an
+  idempotent operation, since repeating this operation will not have the same
+  effect as if it had been performed only once. Conversely, setting a value to
+  "COMPLETE" <i>is</i> an idempotent operation, since repeating this operation
+  will always yield the same result: the value will be "COMPLETE".
+</p>
+<h4>Apache Kafka<div data-tip="This is a technology or product that you can use in your systems." data-for="tooltip-generic" currentitem="false"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M216.056 509.316l197.488-340.044c4.471-7.699-1.87-17.173-10.692-15.973l-131.364 17.855L302.875 6.372c1.058-5.555-6.104-8.738-9.518-4.231L99.183 258.451c-5.656 7.465.333 18.08 9.647 17.1l144.828-15.245-47.479 245.308c-1.145 5.917 6.85 8.914 9.877 3.702z" fill="#c00030"></path><path d="M159.905 240.287c-3.627.29-6.036-3.675-4.108-6.76L300.976 1.241c-2.16-1.709-5.56-1.819-7.619.899L99.183 258.45c-5.656 7.466.333 18.08 9.647 17.1l144.828-15.245-47.479 245.308c-.64 3.309 1.592 5.637 4.201 6.194l81.359-257.447c3.814-12.067-5.808-24.156-18.423-23.146l-113.411 9.073z" fill="#ff0040"></path></svg></div></h4>
+<p>
+  A distributed messaging system created by LinkedIn. Very useful
+  when using the <b>streaming</b> paradigm as opposed to <b>polling</b>.
+</p>
+<a href="https://kafka.apache.org/" target="_blank">Learn more: <span>https://kafka.apache.org/</span></a><h4>Cloud Pub/Sub<div data-tip="This is a technology or product that you can use in your systems." data-for="tooltip-generic" currentitem="false"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M216.056 509.316l197.488-340.044c4.471-7.699-1.87-17.173-10.692-15.973l-131.364 17.855L302.875 6.372c1.058-5.555-6.104-8.738-9.518-4.231L99.183 258.451c-5.656 7.465.333 18.08 9.647 17.1l144.828-15.245-47.479 245.308c-1.145 5.917 6.85 8.914 9.877 3.702z" fill="#c00030"></path><path d="M159.905 240.287c-3.627.29-6.036-3.675-4.108-6.76L300.976 1.241c-2.16-1.709-5.56-1.819-7.619.899L99.183 258.45c-5.656 7.466.333 18.08 9.647 17.1l144.828-15.245-47.479 245.308c-.64 3.309 1.592 5.637 4.201 6.194l81.359-257.447c3.814-12.067-5.808-24.156-18.423-23.146l-113.411 9.073z" fill="#ff0040"></path></svg></div></h4>
+<p>
+  A highly-scalable Pub/Sub messaging service created by Google. Guarantees
+  <b>at-least-once delivery</b> of messages and supports "rewinding" in order to
+  reprocess messages.
+</p>
+<a href="https://cloud.google.com/pubsub/" target="_blank">Learn more: <span>https://cloud.google.com/pubsub/</span></a>
