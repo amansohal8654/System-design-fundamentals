@@ -572,3 +572,37 @@ Strong Consistency usually refers to the consistency of ACID transactions, as op
   are suboptimal, or if your workload is naturally skewed: some servers will
   receive a lot more traffic than others, thus creating a "hot spot".
 </p>
+
+# Leader Elaction
+
+<h4>Leader Election</h4>
+<p>
+  The process by which nodes in a cluster (for instance, servers in a set of
+  servers) elect a so-called "leader" amongst them, responsible for the primary
+  operations of the service that these nodes support. When correctly
+  implemented, leader election guarantees that all nodes in the cluster know
+  which one is the leader at any given time and can elect a new leader if the
+  leader dies for whatever reason.
+</p>
+<h4>Consensus Algorithm</h4>
+<p>
+  A type of complex algorithms used to have multiple entities agree on a single
+  data value, like who the "leader" is amongst a group of machines. Two popular
+  consensus algorithms are <b>Paxos</b> and <b>Raft</b>.
+</p>
+<h4>Paxos &amp; Raft</h4>
+<p>
+  Two consensus algorithms that, when implemented correctly, allow for the
+  synchronization of certain operations, even in a distributed setting.
+</p>
+<h4>Etcd<div data-tip="This is a technology or product that you can use in your systems." data-for="tooltip-generic" currentitem="false"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M216.056 509.316l197.488-340.044c4.471-7.699-1.87-17.173-10.692-15.973l-131.364 17.855L302.875 6.372c1.058-5.555-6.104-8.738-9.518-4.231L99.183 258.451c-5.656 7.465.333 18.08 9.647 17.1l144.828-15.245-47.479 245.308c-1.145 5.917 6.85 8.914 9.877 3.702z" fill="#c00030"></path><path d="M159.905 240.287c-3.627.29-6.036-3.675-4.108-6.76L300.976 1.241c-2.16-1.709-5.56-1.819-7.619.899L99.183 258.45c-5.656 7.466.333 18.08 9.647 17.1l144.828-15.245-47.479 245.308c-.64 3.309 1.592 5.637 4.201 6.194l81.359-257.447c3.814-12.067-5.808-24.156-18.423-23.146l-113.411 9.073z" fill="#ff0040"></path></svg></div></h4>
+<p>
+  Etcd is a strongly consistent and highly available key-value store that's
+  often used to implement leader election in a system.
+</p>
+<a href="https://etcd.io/" target="_blank">Learn more: <span>https://etcd.io/</span></a><h4>ZooKeeper<div data-tip="This is a technology or product that you can use in your systems." data-for="tooltip-generic" currentitem="false"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M216.056 509.316l197.488-340.044c4.471-7.699-1.87-17.173-10.692-15.973l-131.364 17.855L302.875 6.372c1.058-5.555-6.104-8.738-9.518-4.231L99.183 258.451c-5.656 7.465.333 18.08 9.647 17.1l144.828-15.245-47.479 245.308c-1.145 5.917 6.85 8.914 9.877 3.702z" fill="#c00030"></path><path d="M159.905 240.287c-3.627.29-6.036-3.675-4.108-6.76L300.976 1.241c-2.16-1.709-5.56-1.819-7.619.899L99.183 258.45c-5.656 7.466.333 18.08 9.647 17.1l144.828-15.245-47.479 245.308c-.64 3.309 1.592 5.637 4.201 6.194l81.359-257.447c3.814-12.067-5.808-24.156-18.423-23.146l-113.411 9.073z" fill="#ff0040"></path></svg></div></h4>
+<p>
+  ZooKeeper is a strongly consistent, highly available key-value store. It's
+  often used to store important configuration or to perform leader election.
+</p>
+<a href="https://zookeeper.apache.org/" target="_blank" class="_2HDna_Xo6tAd-QZodCVaIP">Learn more: <span class="Link Link--se _2jFzxkZcdWmXPz821xH3eM">https://zookeeper.apache.org/</span></a>
