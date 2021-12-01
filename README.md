@@ -573,7 +573,7 @@ Strong Consistency usually refers to the consistency of ACID transactions, as op
   receive a lot more traffic than others, thus creating a "hot spot".
 </p>
 
-# Leader Elaction
+# Leader Election
 
 <h4>Leader Election</h4>
 <p>
@@ -606,3 +606,19 @@ Strong Consistency usually refers to the consistency of ACID transactions, as op
   often used to store important configuration or to perform leader election.
 </p>
 <a href="https://zookeeper.apache.org/" target="_blank" class="_2HDna_Xo6tAd-QZodCVaIP">Learn more: <span class="Link Link--se _2jFzxkZcdWmXPz821xH3eM">https://zookeeper.apache.org/</span></a>
+
+# Pear To Pear Network
+
+<h4>Peer-To-Peer Network</h4>
+<p>
+  A collection of machines referred to as peers that divide a workload between
+  themselves to presumably complete the workload faster than would otherwise be
+  possible. Peer-to-peer networks are often used in file-distribution systems.
+</p>
+<h4>Gossip Protocol</h4>
+<p>
+  When a set of machines talk to each other in a uncoordinated manner in a
+  cluster to spread information through a system without requiring a central
+  source of data.
+</p>
+
