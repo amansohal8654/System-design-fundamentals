@@ -539,3 +539,36 @@ Strong Consistency usually refers to the consistency of ACID transactions, as op
   <b>properties</b>, and <b>labels</b>.
 </p>
 <a href="https://neo4j.com/" target="_blank">Learn more: <span class="Link Link--se _2jFzxkZcdWmXPz821xH3eM">https://neo4j.com/</span></a>
+
+# Replication And Sharding
+
+<h4>Replication</h4>
+<p>
+  The act of duplicating the data from one database server to others. This
+  is sometimes used to increase the redundancy of your system and
+  tolerate regional failures for instance. Other times you can use
+  replication to move data closer to your clients, thus decreasing
+  the latency of accessing specific data.
+</p>
+<h4>Sharding</h4>
+<p>
+  Sometimes called <b>data partitioning</b>, sharding is the
+  act of splitting a database into two or more pieces called
+  <b>shards</b> and is typically done to increase the throughput
+  of your database. Popular sharding strategies include:
+</p>
+<ul>
+  <li>Sharding based on a client's region</li>
+  <li>Sharding based on the type of data being stored (e.g: user data gets
+      stored in one shard, payments data gets stored in another
+      shard)</li>
+  <li>Sharding based on the hash of a column (only for structured
+      data)</li>
+</ul>
+<h4>Hot Spot</h4>
+<p>
+  When distributing a workload across a set of servers, that workload might be
+  spread unevenly. This can happen if your <b>sharding key</b> or your <b>hashing function</b>
+  are suboptimal, or if your workload is naturally skewed: some servers will
+  receive a lot more traffic than others, thus creating a "hot spot".
+</p>
