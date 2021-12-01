@@ -680,3 +680,26 @@ Strong Consistency usually refers to the consistency of ACID transactions, as op
   used to implement <b>rate limiting</b>.
 </p>
 <a href="https://redis.io/" target="_blank" class="_2HDna_Xo6tAd-QZodCVaIP">Learn more: <span>https://redis.io/</span></a>
+
+# Logging And Monitoring
+
+<h4>Logging</h4>
+<p>
+  The act of collecting and storing logs--useful information about events in
+  your system. Typically your programs will output log messages to its STDOUT
+  or STDERR pipes, which will automatically get aggregated into a <b>centralized
+  logging solution</b>.
+</p>
+<h4>Monitoring</h4>
+<p>
+  The process of having visibility into a system's key metrics, monitoring is
+  typically implemented by collecting important events in a system and
+  aggregating them in human-readable charts.
+</p>
+<h4>Alerting</h4>
+<p>
+  The process through which system administrators get notified when critical
+  system issues occur. Alerting can be set up by defining specific thresholds
+  on monitoring charts, past which alerts are sent to a communication channel
+  like Slack.
+</p>
