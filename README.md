@@ -747,3 +747,209 @@ Strong Consistency usually refers to the consistency of ACID transactions, as op
   reprocess messages.
 </p>
 <a href="https://cloud.google.com/pubsub/" target="_blank">Learn more: <span>https://cloud.google.com/pubsub/</span></a>
+
+# MapReduce
+
+<h4>MapReduce</h4>
+<p>
+  A popular framework for processing very large datasets in a distributed
+  setting efficiently, quickly, and in a fault-tolerant manner. A MapReduce job
+  is comprised of 3 main steps:
+</p>
+<ul>
+  <li>
+    the <b>Map</b> step, which runs a <b>map function</b> on the various chunks
+    of the dataset and transforms these chunks into intermediate
+    <b>key-value pairs</b>.
+  </li>
+  <li>
+    the <b>Shuffle</b> step, which reorganizes the intermediate
+    <b>key-value pairs</b> such that pairs of the same key are routed
+    to the same machine in the final step.
+  </li>
+  <li>
+    the <b>Reduce</b> step, which runs a <b>reduce function</b> on the newly
+    shuffled <b>key-value pairs</b> and transforms them into more meaningful
+    data.
+  </li>
+</ul>
+<p>
+  The canonical example of a MapReduce use case is counting the number of
+  occurrences of words in a large text file.
+</p>
+<p>
+  When dealing with a MapReduce library, engineers and/or systems administrators
+  only need to worry about the map and reduce functions, as well as their inputs
+  and outputs. All other concerns, including the parallelization of tasks and
+  the fault-tolerance of the MapReduce job, are abstracted away and taken care
+  of by the MapReduce implementation.
+</p>
+<h4>Distributed File System</h4>
+<p>
+  A Distributed File System is an abstraction over a (usually large) cluster of
+  machines that allows them to act like one large file system. The two most
+  popular implementations of a DFS are the <b>Google File System</b> (GFS) and
+  the <b>Hadoop Distributed File System</b> (HDFS).
+</p>
+<p>
+  Typically, DFSs take care of the classic <b>availability</b> and
+  <b>replication</b> guarantees that can be tricky to obtain in a
+  distributed-system setting. The overarching idea is that files are split into
+  chunks of a certain size (4MB or 64MB, for instance), and those chunks are
+  sharded across a large cluster of machines. A central control plane is in
+  charge of deciding where each chunk resides, routing reads to the right nodes,
+  and handling communication between machines.
+</p>
+<p>
+  Different DFS implementations have slightly different APIs and semantics, but
+  they achieve the same common goal: extremely large-scale persistent storage.
+</p>
+<h4>Hadoop<div data-tip="This is a technology or product that you can use in your systems." data-for="tooltip-generic" currentitem="false"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M216.056 509.316l197.488-340.044c4.471-7.699-1.87-17.173-10.692-15.973l-131.364 17.855L302.875 6.372c1.058-5.555-6.104-8.738-9.518-4.231L99.183 258.451c-5.656 7.465.333 18.08 9.647 17.1l144.828-15.245-47.479 245.308c-1.145 5.917 6.85 8.914 9.877 3.702z" fill="#c00030"></path><path d="M159.905 240.287c-3.627.29-6.036-3.675-4.108-6.76L300.976 1.241c-2.16-1.709-5.56-1.819-7.619.899L99.183 258.45c-5.656 7.466.333 18.08 9.647 17.1l144.828-15.245-47.479 245.308c-.64 3.309 1.592 5.637 4.201 6.194l81.359-257.447c3.814-12.067-5.808-24.156-18.423-23.146l-113.411 9.073z" fill="#ff0040"></path></svg></div></h4>
+<p>
+  A popular, open-source framework that supports MapReduce jobs and many
+  other kinds of data-processing pipelines. Its central component is <b>HDFS</b>
+  (Hadoop Distributed File System), on top of which other technologies have
+  been developed.
+</p>
+<a href="https://hadoop.apache.org/" target="_blank">Learn more: <span>https://hadoop.apache.org/</span></a>
+
+# Security And Https
+
+<h4>Man-In-The-Middle Attack</h4>
+<p>
+  An attack in which the attacker intercepts a line of communication that is
+  thought to be private by its two communicating parties.
+</p>
+<p>
+  If a malicious actor intercepted and mutated an IP packet on its way from a
+  client to a server, that would be a man-in-the-middle attack.
+</p>
+<p>
+  MITM attacks are the primary threat that encryption and <b>HTTPS</b> aim to
+  defend against.
+</p>
+<h4>Symmetric Encryption</h4>
+<p>
+  A type of encryption that relies on only a single key to both encrypt and
+  decrypt data. The key must be known to all parties involved in communication
+  and must therefore typically be shared between the parties at one point or
+  another.
+</p>
+<p>
+  Symmetric-key algorithms tend to be faster than their asymmetric counterparts.
+</p>
+<p>
+  The most widely used symmetric-key algorithms are part of the Advanced
+  Encryption Standard (<b>AES</b>).
+</p>
+<h4>Asymmetric Encryption</h4>
+<p>
+  Also known as public-key encryption, asymmetric encryption relies on two
+  keys—a public key and a private key—to encrypt and decrypt data. The keys are
+  generated using cryptographic algorithms and are mathematically connected such
+  that data encrypted with the public key can only be decrypted with the private
+  key.
+</p>
+<p>
+  While the private key must be kept secure to maintain the fidelity of this
+  encryption paradigm, the public key can be openly shared.
+</p>
+<p>
+  Asymmetric-key algorithms tend to be slower than their symmetric counterparts.
+</p>
+<h4>AES</h4>
+<p>
+  Stands for <b>Advanced Encryption Standard</b>. AES is a widely used
+  encryption standard that has three symmetric-key algorithms (AES-128, AES-192,
+  and AES-256).
+</p>
+<p>
+  Of note, AES is considered to be the "gold standard" in encryption and is even
+  used by the U.S. National Security Agency to encrypt top secret information.
+</p>
+<h4>HTTPS</h4>
+<p>
+  The <b>H</b>yper<b>T</b>ext <b>T</b>ransfer <b>P</b>rotocol <b>S</b>ecure is
+  an extension of <b>HTTP</b> that's used for secure communication online. It
+  requires servers to have trusted certificates (usually
+  <b>SSL certificates</b>) and uses the Transport Layer Security (<b>TLS</b>), a
+  security protocol built on top of <b>TCP</b>, to encrypt data communicated
+  between a client and a server.
+</p>
+<h4>TLS</h4>
+<p>
+  The <b>T</b>ransport <b>L</b>ayer <b>S</b>ecurity is a security protocol over
+  which <b>HTTP</b> runs in order to achieve secure communication online. "HTTP
+  over TLS" is also known as <b>HTTPS</b>.
+</p>
+<h4>SSL Certificate</h4>
+<p>
+  A digital certificate granted to a server by a <b>certificate authority</b>.
+  Contains the server's public key, to be used as part of the
+  <b>TLS handshake</b> process in an <b>HTTPS</b> connection.
+</p>
+<p>
+  An SSL certificate effectively confirms that a public key belongs to the
+  server claiming it belongs to them. SSL certificates are a crucial defense
+  against <b>man-in-the-middle attacks</b>.
+</p>
+<h4>Certificate Authority</h4>
+<p>
+  A trusted entity that signs digital certificates—namely, SSL certificates that
+  are relied on in <b>HTTPS</b> connections.
+</p>
+<h4>TLS Handshake</h4>
+<p>
+  The process through which a client and a server communicating over
+  <b>HTTPS</b> exchange encryption-related information and establish a secure
+  communication. The typical steps in a TLS handshake are roughly as follows:
+</p>
+<ul>
+  <li>
+    The client sends a <b>client hello</b>—a string of random bytes—to the
+    server.
+  </li>
+  <li>
+    The server responds with a <b>server hello</b>—another string of random
+    bytes—as well as its <b>SSL certificate</b>, which contains its
+    <b>public key</b>.
+  </li>
+  <li>
+    The client verifies that the certificate was issued by a
+    <b>certificate authority</b> and sends a <b>premaster secret</b>—yet another
+    string of random bytes, this time encrypted with the server's public key—to
+    the server.
+  </li>
+  <li>
+    The client and the server use the client hello, the server hello, and the
+    premaster secret to then generate the same <b>symmetric-encryption</b> session keys,
+    to be used to encrypt and decrypt all data communicated during the remainder
+    of the connection.
+  </li>
+</ul>
+
+# Api Design
+
+<h4>Pagination</h4>
+<p>
+  When a network request potentially warrants a really large response, the
+  relevant API might be designed to return only a single <b>page</b>
+  of that response (i.e., a limited portion of the response), accompanied by an
+  identifier or token for the client to request the next page if desired.
+</p>
+<p>
+  Pagination is often used when designing <b>List</b> endpoints. For instance,
+  an endpoint to list videos on the YouTube Trending page could return a huge
+  list of videos. This wouldn't perform very well on mobile devices due to the
+  lower network speeds and simply wouldn't be optimal, since most users will
+  only ever scroll through the first ten or twenty videos. So, the API could be
+  designed to respond with only the first few videos of that list; in this case,
+  we would say that the API response is <b>paginated</b>.
+</p>
+<h4>CRUD Operations</h4>
+<p>
+  Stands for <b>Create</b>, <b>Read</b>, <b>Update</b>,
+  <b>Delete</b> Operations. These four operations often serve as the bedrock of a
+  functioning system and therefore find themselves at the core of many APIs.
+  The term <b>CRUD</b> is very likely to come up during an API-design interview.
+</p>
