@@ -622,3 +622,16 @@ Strong Consistency usually refers to the consistency of ACID transactions, as op
   source of data.
 </p>
 
+# Polling And Streaming
+
+<h4>Polling</h4>
+<p>
+  The act of fetching a resource or piece of data regularly at an interval to
+  make sure your data is not too stale.
+</p>
+<h4>Streaming</h4>
+<p>
+  In networking, it usually refers to the act of continuously getting a feed of
+  information from a server by keeping an open connection between the two
+  machines or processes.
+</p>
